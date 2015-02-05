@@ -20,7 +20,7 @@ if(!file.exists(source_file)){
   
   png(file="Plot4.png", width = 480, height = 480, units = "px")
   par(mfrow=c(2,2))
-  plot(sd$Global_active_power, xlab="",  type="n", xaxt="n", ylab="Global Active Power (kilowats)")
+  plot(sd$Global_active_power, xlab="",  type="n", xaxt="n", ylab="Global Active Power")
   lines(sd$Global_active_power)
   axis(1, at=xlbls, labels=c("Thu","Fri","Sat"))
   
