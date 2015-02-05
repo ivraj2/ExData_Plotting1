@@ -19,7 +19,8 @@ if(!file.exists(source_file)){
   png(file="Plot2.png", width = 480, height = 480, units = "px")
   plot(sd$Global_active_power,   type="n", xaxt="n",xlab="", ylab="Global Active Power (kilowats)")
   lines(sd$Global_active_power)
-  axis(1, at=1:3, labels=c("Thu","Fri","Sat"))
+  xlbls <- c(0,nrow(sd)/2,nrow(sd))
+  axis(1, at=xlbls, labels=c("Thu","Fri","Sat"))
   dev.off()
   print("Done.")
   
